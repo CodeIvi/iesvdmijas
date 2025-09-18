@@ -12,10 +12,13 @@ public class D {
 
     System.out.println("Escribe un dígito que se encuentre dentro del número");
     int dig = sc.nextInt();
-   
+      //Cambio las variables int por String porque me resulta mas sencillo manejarlas de esta forma.
       String numStr=String.valueOf(num);
       String digStr = String.valueOf(dig);
-   if(numStr.length()<2){
+
+      //Creo una condición que en el caso que el número no tenga 2 dígitos o mas de error. En el otro caso, pasará al bucle donde se
+      //comprueba la posición del dígito. En el caso que el dígito no se encuentre dento del número dará un error.
+   if(numStr.length()>=2){
     for(int i = 0;i<numStr.length();i++){
       char c = numStr.charAt(i);
       String numC = String.valueOf(c);
@@ -23,12 +26,14 @@ public class D {
          pos = String.valueOf(i+1);
 
       }
-      if(pos.equals("")){
+     
+   }
+   if(pos.equals("")){
          pos = "No se encontró el dígito";
       }
-   }
    }else{System.out.println("El número introducido es demasiado corto");}
-      
+    
+      //Mostramos el resultado
     System.out.println("La posición del dígito es: "+pos);
     sc.close();
 

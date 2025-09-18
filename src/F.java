@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class F {
+
+    //NO HE SABIDO HACERLO.
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     System.out.println("Escribe la posición del alfil");
@@ -10,7 +12,7 @@ public class F {
     char numC = pos.charAt(1);
     String numStr = String.valueOf(numC);
     int fila = Integer.parseInt(numStr);
-    if(fila<8 || fila>8){
+    if(fila<1 || fila>8){
         System.out.println("Valor no válido");
     }
     
@@ -54,12 +56,44 @@ public class F {
             break;
     }
 
-    int tablero[][] = new int[8][8];
     
-    for(int i=1;i<tablero.length;i++){
+    for(int i=1;i<8;i++){
         for(int j=1;j<8;j++){
             int suma= fila+columna;
             int resta = fila-columna;
+        
+            if(i+j==suma){
+                switch(i) {
+        case 1:
+           letra  = 'a';
+            break;
+        case 2:
+            letra = 'b';
+            break;
+        case 3:
+            letra = 'c';
+            break;
+        case 4:
+            letra = 'd';
+            break;
+        case 5:
+            letra = 'e';
+            break;
+        case 6:
+            letra = 'f';
+            break;
+        case 7:
+            letra = 'g';
+            break;
+        case 8:
+            letra = 'h';
+            break;
+        default:
+            System.out.println("Valor no válido");
+            break;
+    }
+    System.out.println(letra+);
+        }
 
 
         }
