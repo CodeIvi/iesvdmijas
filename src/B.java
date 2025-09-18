@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class B {
     public static void main(String[] args) {
-    
+    //Pongo las variables que voy a usar y las igualo a 0
     int IVA = 0;
     double promo = 0;
     double precioConIva = 0;
+
+    //Creo un Scanner para pedir la información necesaria para realizar el ejercicio.
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Escribe base imponible del producto");
@@ -18,7 +20,7 @@ public class B {
     System.out.println("Escribe codigo promocional (nopro,mitad,meno5 o 5porc)");
     String promocion = sc.nextLine();
     
-    
+    //Creo dos condiciones con if para mostras diferentes resultados según los datos introducidos en el scanner
     if(tipoIVA.equals("general")){
         IVA = 21;
     }else if (tipoIVA.equals("reducido")){
@@ -38,12 +40,13 @@ public class B {
     }
 
   
-
+    //Muestro la información de los datos dados y los resultados.
     System.out.println("Base imponible: "+BaseImponible);
     System.out.println("IVA: "+IVA);
     System.out.println("Precio con IVA: "+precioConIva);
     System.out.println("Cód. promo. ("+promocion+")"+"("+"-"+promo+")");
     System.out.println("Total: "+(precioConIva-promo));
+    sc.close();
 }
 
 
