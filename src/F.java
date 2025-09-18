@@ -10,7 +10,10 @@ public class F {
     char numC = pos.charAt(1);
     String numStr = String.valueOf(numC);
     int num = Integer.parseInt(numStr);
-
+    if(num<8 || num>8){
+        System.out.println("Valor no válido");
+    }
+    
     int columna;
     switch (letra) {
         case 'a':
@@ -47,12 +50,13 @@ public class F {
             break;
         default:
             columna = -1; // Valor inválido
+            System.out.println("Valor no válido");
             break;
     }
 
     int tablero[][] = new int[8][8];
 
-    
+        
     
 
 }
